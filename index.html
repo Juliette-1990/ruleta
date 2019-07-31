@@ -28,11 +28,33 @@
 		    margin-right: auto;
 		    margin-left: auto;
 		}
+		
+		.btn_start {
+			color: #fff !important;
+			text-transform: uppercase;
+			text-decoration: none;
+			background: #ed3330;
+			padding: 20px;
+			border-radius: 5px;
+			display: inline-block;
+			border: none;
+			transition: all 0.4s ease 0s;
+		}
+
+		.btn_start:hover {
+			color: #ed3330 !important;
+			background: #ffffff;
+			letter-spacing: 1px;
+			-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+			-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+			box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+			transition: all 0.4s ease 0s;
+		}
 	</style>
 </head>
 
 <body>
-	<input type="button" value="Comenzar" style="display: block; text-align: center" id="spin">
+	<input type="button" value="Comenzar" class="btn_start" style="display: block; text-align: center" id="spin">
 	<canvas id="canvas" width="500" height="500"></canvas>
 	<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
 	<script id="rendered-js">
@@ -72,7 +94,7 @@
 		ctx.clearRect(0, 0, 500, 500);
 		ctx.strokeStyle = "black";
 		ctx.lineWidth = 2;
-		ctx.font = 'bold 16px Helvetica, Arial';
+		ctx.font = 'bold 20px Helvetica, Arial';
 		for (var i = 0; i < options.length; i++) {if (window.CP.shouldStopExecution(0)) break;
 		  var angle = startAngle + i * arc;
 		  //ctx.fillStyle = colors[i];
